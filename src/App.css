@@ -1,38 +1,88 @@
 .App {
-  text-align: center;
+  padding: 10%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.toDos-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items:flex-end;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.Todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.newTodo {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
+
+.toDos-list {
+  width: 100%;
+}
+
+.imgUpload {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  gap: 10px;
+}
+
+.imgContainer {
+  margin-top: 20px;
+}
+
+.img {
+  object-fit: contain;
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  display: inline-block;
+  width: max-content;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px 14px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 200ms,background 200ms;
+  background: transparent;
+  color: #000000;
+  box-shadow: 0 0 0 2px #000000 inset;
+}
+
+.primary {
+  background-color: #000000;
+  color:  white;
+}
+
+.primary:active {
+  background-color: #383838 !important;
+  color:  white;
+}
+
+.btn:hover{
+  transform: translateY(-2px);
+}
+
+.btn:active{
+  background-color: rgb(245, 245, 245);
+  transform: scale(0.99);
+}
+
